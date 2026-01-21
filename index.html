@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well Trust Home Care | Compassionate Care at Home</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">♥</span>
+                <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Compassionate Care<br><span class="highlight">In the Comfort of Home</span></h1>
+            <p class="hero-description">We provide personalized, professional home healthcare services that help your loved ones live independently with dignity and peace of mind.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Committed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">✓</span>
+                    <span class="stat-label">Background Checked</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">✓</span>
+                    <span class="stat-label">Certified Caregivers</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-frame">
+                <img src="images/onArmchair.jpg" alt="Caregiver reading with elderly woman in a warm home setting" class="hero-img">
+            </div>
+            <div class="floating-card card-1">
+                <span class="card-icon">✓</span>
+                <span>Licensed & Insured</span>
+            </div>
+            <div class="floating-card card-2">
+                <span class="card-icon">♥</span>
+                <span>Personalized Plans</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2>Our Care Services</h2>
+                <p>Comprehensive home healthcare tailored to meet the unique needs of each individual we serve.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧑‍🤝‍🧑</div>
+                    <h3>Personal Care</h3>
+                    <p>Assistance with daily activities including bathing, dressing, grooming, and mobility support to maintain independence.</p>
+                    <a href="#contact" class="service-link" data-service="personal">Learn More →</a>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">🏡</div>
+                    <h3>Household Support</h3>
+                    <p>Light housekeeping, laundry, dishes, bed making, grocery shopping, and errands.</p>
+                    <a href="#contact" class="service-link" data-service="household">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Companion and Support Care</h3>
+                    <p>Meaningful companionship, conversation, and engagement in activities that promote mental and emotional well-being.</p>
+                    <a href="#contact" class="service-link" data-service="companion">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>Memory Care</h3>
+                    <p>Specialized support for individuals with Alzheimer's or dementia, focused on safety, routine, and cognitive engagement.</p>
+                    <a href="#contact" class="service-link" data-service="memory">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Meal Assistance</h3>
+                    <p>Meal preparation and assistance with eating and hydration.</p>
+                    <a href="#contact" class="service-link" data-service="meal">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Medication Reminders</h3>
+                    <p>Reminding clients to take medications as prescribed (no administration).</p>
+                    <a href="#contact" class="service-link" data-service="medication">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-image main">
+                        <img src="images/oldman.jpg" alt="Caregiver holding hands with elderly man in a cozy living room" class="about-img">
+                    </div>
+                    <div class="about-image secondary">
+                        <img src="images/attheDoor.png" alt="Caregiver arriving at door greeted by elderly couple" class="about-img-secondary">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2>Caring for Your Family Like Our Own</h2>
+                    <p class="lead">At Well Trust Home Care, we believe everyone deserves to age with grace, dignity, and the comfort of their own home.</p>
+                    <p>Our mission has always been simple: provide exceptional, compassionate care that treats every client like family. Our team of certified caregivers, nurses, and therapists are carefully selected not just for their skills, but for their genuine passion for helping others.</p>
+                    <div class="values-grid">
+                        <div class="value">
+                            <span class="value-icon">✓</span>
+                            <div>
+                                <strong>Background Checked</strong>
+                                <span>All caregivers fully vetted</span>
+                            </div>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon">✓</span>
+                            <div>
+                                <strong>Certified Staff</strong>
+                                <span>Licensed & trained professionals</span>
+                            </div>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon">✓</span>
+                            <div>
+                                <strong>Flexible Scheduling</strong>
+                                <span>Care when you need it</span>
+                            </div>
+                        </div>
+                        <div class="value">
+                            <span class="value-icon">✓</span>
+                            <div>
+                                <strong>Family Updates</strong>
+                                <span>Regular communication</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Meet Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Schedule a free, no-obligation consultation to discuss how we can help your loved one thrive at home.</p>
+                <div class="cta-actions">
+                    <a href="tel:+12347046458" class="btn btn-white">
+                        <span class="btn-icon">📞</span>
+                        Call (234) 704-6458
+                    </a>
+                    <a href="#contact" class="btn btn-outline-white">Request Callback</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Let's Talk About Care</h2>
+                    <p>We're here to answer your questions and help you find the right care solution for your family.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon"><span>📍</span></span>
+                            <div>
+                                <strong>Address</strong>
+                                <span>123 Care Street, Suite 100<br>Your City, State 12345</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><span>☎️</span></span>
+                            <div>
+                                <strong>Call Us</strong>
+                                <span>(234) 704-6458</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><span>📮</span></span>
+                            <div>
+                                <strong>Email Us</strong>
+                                <span>welltrusthomecare@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><span>⏰</span></span>
+                            <div>
+                                <strong>Office Hours</strong>
+                                <span>Mon-Fri: 9am - 6pm<br>24/7 Care Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Request a Consultation</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="personal">Personal Care</option>
+                                <option value="household">Household Support</option>
+                                <option value="companion">Companion and Support Care</option>
+                                <option value="memory">Memory Care</option>
+                                <option value="meal">Meal Assistance</option>
+                                <option value="medication">Medication Reminders</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Needs</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please share any details about the care you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+                        <p class="form-note">We'll respond within 24 hours. Your information is kept confidential.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">♥</span>
+                        <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+                    </a>
+                    <p>Providing compassionate, professional home healthcare services to families in our community.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Personal Care</a></li>
+                        <li><a href="#services">Household Support</a></li>
+                        <li><a href="#services">Companion and Support Care</a></li>
+                        <li><a href="#services">Memory Care</a></li>
+                        <li><a href="#services">Meal Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Care Street, Suite 100<br>Your City, State 12345</p>
+                    <p>☎ (234) 704-6458</p>
+                    <p>✉️ welltrusthomecare@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Well Trust Home Care. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Call Button -->
+    <a href="tel:+12347046458" class="mobile-call-btn">
+        <span class="call-icon">📞</span>
+        Call Now
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

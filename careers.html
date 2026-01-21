@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Well Trust Home Care</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-careers">
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">♥</span>
+                <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="careers.html" class="active">Careers</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="careers-hero-content">
+                <span class="section-tag">Careers</span>
+                <h1>Join Our Team</h1>
+                <p>Are you passionate about making a difference in people's lives? We're looking for compassionate, dedicated caregivers to join the Well Trust family.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="careers-benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Work With Us?</h2>
+                <p>We believe in taking care of our team just as well as we take care of our clients.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📅</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Work hours that fit your lifestyle. We offer part-time, full-time, and weekend options.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Pay</h3>
+                    <p>We value your skills and dedication with competitive compensation packages.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Supportive Team</h3>
+                    <p>Join a caring community that supports each other and celebrates successes together.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h3>Training & Development</h3>
+                    <p>Grow your skills with ongoing training and professional development opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-section" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <h2>Caregiver Application</h2>
+                <p>WellTrust Home Care LLC</p>
+            </div>
+            
+            <form class="application-form" id="application-form" name="caregiver-application" method="POST" data-netlify="true" enctype="multipart/form-data">
+                <input type="hidden" name="form-name" value="caregiver-application">
+                
+                <!-- A) Personal Information -->
+                <div class="form-section">
+                    <h3>A) Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-firstName">First Name *</label>
+                            <input type="text" id="app-firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-lastName">Last Name *</label>
+                            <input type="text" id="app-lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-phone">Phone Number *</label>
+                            <input type="tel" id="app-phone" name="phone" required pattern="[\d\s\-\(\)\+]{10,}" title="Please enter a valid phone number (at least 10 digits)" placeholder="(234) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-email">Email *</label>
+                            <input type="email" id="app-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-location">City / ZIP Code *</label>
+                        <input type="text" id="app-location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Contact Method</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="contactMethod" value="call"> Call</label>
+                            <label class="radio-label"><input type="radio" name="contactMethod" value="text"> Text</label>
+                            <label class="radio-label"><input type="radio" name="contactMethod" value="email"> Email</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B) Position Details -->
+                <div class="form-section">
+                    <h3>B) Position Details</h3>
+                    <div class="form-group">
+                        <label for="app-position">Position Applying For</label>
+                        <select id="app-position" name="position">
+                            <option value="">Select position...</option>
+                            <option value="caregiver">Caregiver</option>
+                            <option value="hha">Home Health Aide (HHA)</option>
+                            <option value="stna-cna">STNA / CNA</option>
+                            <option value="companion">Companion</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Are you 18 years or older? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="over18" value="yes" required> Yes</label>
+                                <label class="radio-label"><input type="radio" name="over18" value="no"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Legally authorized to work in the U.S.? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="authorized" value="yes" required> Yes</label>
+                                <label class="radio-label"><input type="radio" name="authorized" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Do you have reliable transportation? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="transportation" value="yes" required> Yes</label>
+                                <label class="radio-label"><input type="radio" name="transportation" value="no"> No</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Able to pass BCI & FBI background checks? *</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="backgroundCheck" value="yes" required> Yes</label>
+                                <label class="radio-label"><input type="radio" name="backgroundCheck" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C) Availability -->
+                <div class="form-section">
+                    <h3>C) Availability</h3>
+                    <div class="form-group">
+                        <label for="app-startDate">Available Start Date *</label>
+                        <input type="date" id="app-startDate" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Availability (check all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label"><input type="checkbox" name="availability" value="days"> Days</label>
+                            <label class="checkbox-label"><input type="checkbox" name="availability" value="evenings"> Evenings</label>
+                            <label class="checkbox-label"><input type="checkbox" name="availability" value="nights"> Nights</label>
+                            <label class="checkbox-label"><input type="checkbox" name="availability" value="weekends"> Weekends</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Days Available</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="mon"> Mon</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="tue"> Tue</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="wed"> Wed</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="thu"> Thu</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="fri"> Fri</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="sat"> Sat</label>
+                            <label class="checkbox-label"><input type="checkbox" name="daysAvailable" value="sun"> Sun</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-shiftLength">Preferred Shift Length</label>
+                        <select id="app-shiftLength" name="shiftLength">
+                            <option value="">Select...</option>
+                            <option value="4-6">4–6 hours</option>
+                            <option value="8">8 hours</option>
+                            <option value="10-12">10–12 hours</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- D) Certifications & Training -->
+                <div class="form-section">
+                    <h3>D) Certifications & Training</h3>
+                    <div class="form-group">
+                        <label>Certifications (check all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="stna-cna"> STNA / CNA</label>
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="hha"> HHA</label>
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="cpr"> CPR / First Aid</label>
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="dementia"> Dementia / Alzheimer's Training</label>
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="hospice"> Hospice Training</label>
+                            <label class="checkbox-label"><input type="checkbox" name="certifications" value="none"> None</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-experience">Years of caregiving experience</label>
+                        <select id="app-experience" name="experience">
+                            <option value="">Select...</option>
+                            <option value="less-6-months">Less than 6 months</option>
+                            <option value="6-12-months">6–12 months</option>
+                            <option value="1-3-years">1–3 years</option>
+                            <option value="3-plus">3+ years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- E) Work History -->
+                <div class="form-section">
+                    <h3>E) Work History / Employment History</h3>
+                    <h4>Most Recent Employer</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer1">Employer Name *</label>
+                            <input type="text" id="app-employer1" name="employer1Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-jobTitle1">Job Title *</label>
+                            <input type="text" id="app-jobTitle1" name="employer1Title" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer1Location">City / State *</label>
+                            <input type="text" id="app-employer1Location" name="employer1Location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-employer1Setting">Type of Setting</label>
+                            <select id="app-employer1Setting" name="employer1Setting">
+                                <option value="">Select...</option>
+                                <option value="home-care">Home Care</option>
+                                <option value="assisted-living">Assisted Living</option>
+                                <option value="nursing-facility">Nursing Facility</option>
+                                <option value="hospital">Hospital</option>
+                                <option value="private-duty">Private Duty</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer1Start">Start Date *</label>
+                            <input type="date" id="app-employer1Start" name="employer1Start" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-employer1End">End Date (or "Present") *</label>
+                            <input type="text" id="app-employer1End" name="employer1End" placeholder="MM/YYYY or Present" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-employer1Duties">Main Duties & Responsibilities</label>
+                        <textarea id="app-employer1Duties" name="employer1Duties" rows="3"></textarea>
+                    </div>
+
+                    <h4>Previous Employer (optional)</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer2">Employer Name</label>
+                            <input type="text" id="app-employer2" name="employer2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-jobTitle2">Job Title</label>
+                            <input type="text" id="app-jobTitle2" name="employer2Title">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer2Location">City / State</label>
+                            <input type="text" id="app-employer2Location" name="employer2Location">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-employer2Start">Start Date</label>
+                            <input type="date" id="app-employer2Start" name="employer2Start">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-employer2End">End Date</label>
+                            <input type="text" id="app-employer2End" name="employer2End" placeholder="MM/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label>May we contact your previous employer?</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="contactEmployer" value="yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="contactEmployer" value="no"> No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-employer2Duties">Duties & Responsibilities</label>
+                        <textarea id="app-employer2Duties" name="employer2Duties" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- F) Skills & Services -->
+                <div class="form-section">
+                    <h3>F) Skills & Services Provided</h3>
+                    <p class="form-hint">Check all that apply</p>
+                    <div class="checkbox-group skills-grid">
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="personal-care"> Personal care (bathing, grooming, toileting)</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="transfers"> Transfers / mobility assistance</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="housekeeping"> Light housekeeping</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="meal-prep"> Meal preparation</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="companionship"> Companionship</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="dementia-care"> Dementia care</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="medication"> Medication reminders (non-medical)</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="vitals"> Vital signs (if certified)</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="hoyer"> Hoyer lift (if trained)</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="transportation"> Transportation / errands</label>
+                        <label class="checkbox-label"><input type="checkbox" name="skills" value="hospice"> Hospice support</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="app-otherSkills">Other skills</label>
+                        <textarea id="app-otherSkills" name="otherSkills" rows="2" placeholder="Please list any other relevant skills..."></textarea>
+                    </div>
+                </div>
+
+                <!-- G) References -->
+                <div class="form-section">
+                    <h3>G) References</h3>
+                    <h4>Reference #1</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-ref1Name">Name *</label>
+                            <input type="text" id="app-ref1Name" name="ref1Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="app-ref1Phone">Phone *</label>
+                            <input type="tel" id="app-ref1Phone" name="ref1Phone" required pattern="[\d\s\-\(\)\+]{10,}" title="Please enter a valid phone number" placeholder="(234) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-ref1Relationship">Relationship *</label>
+                            <input type="text" id="app-ref1Relationship" name="ref1Relationship" required>
+                        </div>
+                    </div>
+                    <h4>Reference #2</h4>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-ref2Name">Name</label>
+                            <input type="text" id="app-ref2Name" name="ref2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-ref2Phone">Phone</label>
+                            <input type="tel" id="app-ref2Phone" name="ref2Phone" pattern="[\d\s\-\(\)\+]{10,}" title="Please enter a valid phone number" placeholder="(234) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-ref2Relationship">Relationship</label>
+                            <input type="text" id="app-ref2Relationship" name="ref2Relationship">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- H) Additional Information -->
+                <div class="form-section">
+                    <h3>H) Additional Information</h3>
+                    <div class="form-group">
+                        <label for="app-serviceAreas">Preferred service areas (cities you can work in)</label>
+                        <input type="text" id="app-serviceAreas" name="serviceAreas" placeholder="e.g., Cleveland, Macedonia, Beachwood, Solon, Bedford">
+                    </div>
+                    <div class="form-group">
+                        <label for="app-languages">Do you speak another language? If yes, which?</label>
+                        <input type="text" id="app-languages" name="languages" placeholder="e.g., Spanish, French, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="app-limitations">Any physical limitations or scheduling restrictions?</label>
+                        <textarea id="app-limitations" name="limitations" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- I) Documents Upload -->
+                <div class="form-section">
+                    <h3>I) Documents Upload (optional)</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-resume">Upload Resume</label>
+                            <input type="file" id="app-resume" name="resume" accept=".pdf,.doc,.docx">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-certFiles">Upload Certifications / Licenses</label>
+                            <input type="file" id="app-certFiles" name="certFiles" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- J) Agreement & Signature -->
+                <div class="form-section">
+                    <h3>J) Agreement & Signature</h3>
+                    <div class="form-group">
+                        <div class="checkbox-group agreement-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="certifyTrue" required>
+                                I certify that the information provided is true and complete.
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="understandChecks" required>
+                                I understand employment is contingent upon background checks, reference checks, and eligibility verification.
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="understandNoGuarantee" required>
+                                I understand this application does not guarantee employment.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="app-signature">Signature (type full legal name) *</label>
+                            <input type="text" id="app-signature" name="signature" required placeholder="Type your full legal name">
+                        </div>
+                        <div class="form-group">
+                            <label for="app-signDate">Date *</label>
+                            <input type="date" id="app-signDate" name="signDate" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Submit Application</button>
+                <p class="form-note">We'll review your application and contact you within 3-5 business days.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">♥</span>
+                        <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+                    </a>
+                    <p>Providing compassionate, professional home healthcare services to families in our community.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Personal Care</a></li>
+                        <li><a href="index.html#services">Household Support</a></li>
+                        <li><a href="index.html#services">Companion and Support Care</a></li>
+                        <li><a href="index.html#services">Memory Care</a></li>
+                        <li><a href="index.html#services">Meal Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>📍 123 Care Street, Suite 100<br>Your City, State 12345</p>
+                    <p>☎ (234) 704-6458</p>
+                    <p>✉️ welltrusthomecare@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Well Trust Home Care. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Wait for page to fully load
+        window.addEventListener('load', function() {
+            const form = document.getElementById('application-form');
+            if (!form) {
+                console.error('Form not found');
+                return;
+            }
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check if jsPDF loaded
+                if (!window.jspdf) {
+                    alert('PDF library is still loading. Please wait a moment and try again.');
+                    return;
+                }
+                
+                const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Helper function to get form values
+            const getValue = (id) => document.getElementById(id)?.value || '';
+            const getRadio = (name) => document.querySelector(`input[name="${name}"]:checked`)?.value || '';
+            const getCheckboxes = (name) => {
+                const checked = document.querySelectorAll(`input[name="${name}"]:checked`);
+                return Array.from(checked).map(cb => cb.value).join(', ') || 'None';
+            };
+            
+            let y = 20;
+            const lineHeight = 7;
+            const pageWidth = 210;
+            const margin = 20;
+            const contentWidth = pageWidth - (margin * 2);
+            
+            // Add page check
+            const checkPage = (needed = 10) => {
+                if (y > 270 - needed) {
+                    doc.addPage();
+                    y = 20;
+                }
+            };
+            
+            // Title
+            doc.setFontSize(18);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Caregiver Application', pageWidth / 2, y, { align: 'center' });
+            y += 8;
+            doc.setFontSize(12);
+            doc.setFont('helvetica', 'normal');
+            doc.text('WellTrust Home Care LLC', pageWidth / 2, y, { align: 'center' });
+            y += 15;
+            
+            // Section helper
+            const addSection = (title) => {
+                checkPage(20);
+                doc.setFontSize(12);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(74, 103, 65);
+                doc.text(title, margin, y);
+                y += 8;
+                doc.setTextColor(0, 0, 0);
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(10);
+            };
+            
+            const addField = (label, value) => {
+                checkPage();
+                doc.setFont('helvetica', 'bold');
+                doc.text(label + ':', margin, y);
+                doc.setFont('helvetica', 'normal');
+                const textLines = doc.splitTextToSize(value || 'N/A', contentWidth - 50);
+                doc.text(textLines, margin + 50, y);
+                y += lineHeight * Math.max(textLines.length, 1);
+            };
+            
+            // A) Personal Information
+            addSection('A) Personal Information');
+            addField('Name', getValue('app-firstName') + ' ' + getValue('app-lastName'));
+            addField('Phone', getValue('app-phone'));
+            addField('Email', getValue('app-email'));
+            addField('Location', getValue('app-location'));
+            addField('Contact Method', getRadio('contactMethod'));
+            y += 5;
+            
+            // B) Position Details
+            addSection('B) Position Details');
+            addField('Position', document.getElementById('app-position')?.options[document.getElementById('app-position')?.selectedIndex]?.text || '');
+            addField('Over 18', getRadio('over18'));
+            addField('Work Authorized', getRadio('authorized'));
+            addField('Transportation', getRadio('transportation'));
+            addField('Background Check', getRadio('backgroundCheck'));
+            y += 5;
+            
+            // C) Availability
+            addSection('C) Availability');
+            addField('Start Date', getValue('app-startDate'));
+            addField('Availability', getCheckboxes('availability'));
+            addField('Days Available', getCheckboxes('daysAvailable'));
+            addField('Shift Length', document.getElementById('app-shiftLength')?.options[document.getElementById('app-shiftLength')?.selectedIndex]?.text || '');
+            y += 5;
+            
+            // D) Certifications
+            addSection('D) Certifications & Training');
+            addField('Certifications', getCheckboxes('certifications'));
+            addField('Experience', document.getElementById('app-experience')?.options[document.getElementById('app-experience')?.selectedIndex]?.text || '');
+            y += 5;
+            
+            // E) Work History
+            addSection('E) Work History');
+            addField('Employer', getValue('app-employer1'));
+            addField('Job Title', getValue('app-jobTitle1'));
+            addField('Location', getValue('app-employer1Location'));
+            addField('Setting', document.getElementById('app-employer1Setting')?.options[document.getElementById('app-employer1Setting')?.selectedIndex]?.text || '');
+            addField('Dates', getValue('app-employer1Start') + ' to ' + getValue('app-employer1End'));
+            addField('Duties', getValue('app-employer1Duties'));
+            
+            if (getValue('app-employer2')) {
+                y += 3;
+                addField('Prev Employer', getValue('app-employer2'));
+                addField('Job Title', getValue('app-jobTitle2'));
+                addField('Contact OK', getRadio('contactEmployer'));
+            }
+            y += 5;
+            
+            // F) Skills
+            addSection('F) Skills & Services');
+            checkPage(15);
+            const skills = getCheckboxes('skills');
+            const skillLines = doc.splitTextToSize(skills, contentWidth);
+            doc.text(skillLines, margin, y);
+            y += lineHeight * skillLines.length;
+            if (getValue('app-otherSkills')) {
+                addField('Other', getValue('app-otherSkills'));
+            }
+            y += 5;
+            
+            // G) References
+            addSection('G) References');
+            addField('Reference 1', getValue('app-ref1Name') + ' - ' + getValue('app-ref1Phone') + ' (' + getValue('app-ref1Relationship') + ')');
+            if (getValue('app-ref2Name')) {
+                addField('Reference 2', getValue('app-ref2Name') + ' - ' + getValue('app-ref2Phone') + ' (' + getValue('app-ref2Relationship') + ')');
+            }
+            y += 5;
+            
+            // H) Additional Info
+            addSection('H) Additional Information');
+            addField('Service Areas', getValue('app-serviceAreas'));
+            addField('Languages', getValue('app-languages'));
+            addField('Limitations', getValue('app-limitations'));
+            y += 5;
+            
+            // J) Signature
+            addSection('J) Agreement & Signature');
+            addField('Signature', getValue('app-signature'));
+            addField('Date', getValue('app-signDate'));
+            
+            // Generate filename
+            const firstName = getValue('app-firstName') || 'Application';
+            const lastName = getValue('app-lastName') || '';
+            const date = new Date().toISOString().split('T')[0];
+            const filename = `WellTrust_Application_${firstName}_${lastName}_${date}.pdf`;
+            
+            // Save PDF
+            doc.save(filename);
+            
+            // Save PDF
+                doc.save(filename);
+                
+                // Now submit the form to Netlify for file uploads
+                const formData = new FormData(form);
+                
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Application submitted successfully!\n\nYour PDF has been downloaded and your application (with attachments) has been sent to WellTrust Home Care.\n\nWe will contact you within 3-5 business days.');
+                        form.reset();
+                    } else {
+                        alert('Application PDF downloaded!\n\nNote: There was an issue sending online. Please email the PDF and attachments to:\nwelltrusthomecare@gmail.com');
+                    }
+                })
+                .catch(error => {
+                    alert('Application PDF downloaded!\n\nNote: There was an issue sending online. Please email the PDF and attachments to:\nwelltrusthomecare@gmail.com');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
