@@ -1518,6 +1518,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
         border-radius: 60px 60px 0 0;
     }
     
+    .hero-stats {
+        background: var(--color-cream-dark);
+        padding: 24px 32px;
+        border-radius: var(--radius-lg);
+        margin-top: 16px;
+    }
+    
     .hero-image {
         max-width: 500px;
         margin: 0 auto;
@@ -1639,7 +1646,8 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     
     .hero-stats {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        padding: 20px 24px;
     }
     
     .stat {
