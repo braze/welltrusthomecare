@@ -1653,3 +1653,324 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     }
 }
 
+/* ============================================
+   Legal Pages
+   ============================================ */
+/* Force navbar to be solid on legal pages */
+.page-legal .navbar {
+    background: var(--color-white) !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.page-legal .navbar .nav-links a {
+    color: var(--color-text-light);
+}
+
+.page-legal .navbar .nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.legal-hero {
+    padding: 160px 0 60px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.legal-hero h1 {
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.legal-meta {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.legal-content {
+    padding: var(--section-padding) 0;
+    background: var(--color-white);
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-intro {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.legal-content h2 {
+    color: var(--color-primary);
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+.legal-content h3 {
+    color: var(--color-text);
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 1.125rem;
+}
+
+.legal-content p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.legal-content ul {
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.legal-content ul li {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 8px;
+    position: relative;
+    list-style: disc;
+}
+
+.legal-content ul li::marker {
+    color: var(--color-primary);
+}
+
+.legal-important {
+    background: var(--color-cream);
+    border-left: 4px solid var(--color-accent);
+    padding: 24px;
+    margin-bottom: 32px;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.legal-important p {
+    color: var(--color-text);
+    margin: 0;
+}
+
+.legal-contact {
+    background: var(--color-cream);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    margin-top: 24px;
+}
+
+.legal-contact p {
+    margin-bottom: 8px;
+}
+
+.legal-contact a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.legal-contact a:hover {
+    color: var(--color-accent);
+}
+
+.legal-nav {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-cream-dark);
+}
+
+.legal-nav h3 {
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.legal-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.legal-nav ul li {
+    margin-bottom: 8px;
+}
+
+.legal-nav a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.legal-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Acknowledgment & Agreement Forms */
+.acknowledgment-box {
+    background: var(--color-cream);
+    border: 2px solid var(--color-primary-light);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    margin: 32px 0;
+}
+
+.acknowledgment-box h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.printable-form {
+    background: var(--color-cream);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    margin: 40px 0;
+}
+
+.printable-form h2 {
+    margin-top: 0;
+}
+
+.form-instructions {
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 32px;
+}
+
+.signature-section {
+    margin: 32px 0;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--color-cream-dark);
+}
+
+.signature-section:last-child {
+    border-bottom: none;
+}
+
+.signature-field {
+    margin-bottom: 24px;
+}
+
+.signature-field label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+}
+
+.signature-line {
+    border-bottom: 1px solid var(--color-text);
+    min-height: 32px;
+    width: 100%;
+}
+
+.signature-line.short {
+    max-width: 200px;
+}
+
+.agreement-statement {
+    background: var(--color-white);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: 32px;
+}
+
+.esign-form {
+    background: var(--color-cream);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    margin: 40px 0;
+}
+
+.esign-form h2 {
+    margin-top: 0;
+}
+
+.esign-disclaimer {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 24px 0;
+    padding: 16px;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+}
+
+.acknowledgment-form {
+    max-width: 100%;
+}
+
+.acknowledgment-form .form-group {
+    margin-bottom: 20px;
+}
+
+.print-actions {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .navbar,
+    .footer,
+    .esign-form,
+    .print-actions,
+    .legal-nav {
+        display: none !important;
+    }
+    
+    .legal-hero {
+        padding: 40px 0;
+        background: none !important;
+        color: var(--color-text) !important;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    .legal-hero h1 {
+        color: var(--color-text) !important;
+    }
+    
+    .legal-content {
+        padding: 20px 0;
+    }
+    
+    .printable-form {
+        background: none;
+        padding: 20px 0;
+        border: 1px solid #ccc;
+    }
+    
+    .signature-line {
+        border-bottom: 1px solid #000;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 18pt;
+    }
+    
+    h2 {
+        font-size: 14pt;
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-hero {
+        padding: 120px 0 40px;
+    }
+    
+    .printable-form,
+    .esign-form {
+        padding: 24px;
+    }
+    
+    .acknowledgment-box {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Acknowledgment | WellTrust Home Care LLC</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-legal">
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">♥</span>
+                <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Legal Page Header -->
+    <section class="legal-hero">
+        <div class="container">
+            <h1>Client Acknowledgment of Privacy Practices</h1>
+            <p class="legal-meta"><strong>WellTrust Home Care LLC</strong></p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-container">
+                <p class="legal-intro">
+                    This form acknowledges that you have received or been offered a copy of the Notice of Privacy Practices
+                    for WellTrust Home Care LLC.
+                </p>
+
+                <div class="acknowledgment-box">
+                    <h2>Acknowledgment Statement</h2>
+                    <p>
+                        I acknowledge that I have received or been offered a copy of the Notice of Privacy Practices for
+                        WellTrust Home Care LLC. I understand that this notice describes how my personal and health-related
+                        information may be used and disclosed, and how I can access this information.
+                    </p>
+                </div>
+
+                <!-- Printable Form Section -->
+                <div class="printable-form">
+                    <h2>Print & Sign</h2>
+                    <p class="form-instructions">Please print this page, complete the information below, and return to WellTrust Home Care LLC.</p>
+                    
+                    <div class="signature-section">
+                        <div class="signature-field">
+                            <label>Client Name (Print)</label>
+                            <div class="signature-line"></div>
+                        </div>
+                        
+                        <div class="signature-field">
+                            <label>Signature</label>
+                            <div class="signature-line"></div>
+                        </div>
+                        
+                        <div class="signature-field">
+                            <label>Date</label>
+                            <div class="signature-line short"></div>
+                        </div>
+                    </div>
+
+                    <div class="signature-section">
+                        <p><strong>If signed by personal representative:</strong></p>
+                        
+                        <div class="signature-field">
+                            <label>Representative Name (Print)</label>
+                            <div class="signature-line"></div>
+                        </div>
+                        
+                        <div class="signature-field">
+                            <label>Relationship to Client</label>
+                            <div class="signature-line"></div>
+                        </div>
+                        
+                        <div class="signature-field">
+                            <label>Representative Signature</label>
+                            <div class="signature-line"></div>
+                        </div>
+                        
+                        <div class="signature-field">
+                            <label>Date</label>
+                            <div class="signature-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Sign Form Section -->
+                <div class="esign-form">
+                    <h2>Electronic Signature</h2>
+                    <p class="form-instructions">Complete the form below to submit your acknowledgment electronically.</p>
+                    
+                    <form class="acknowledgment-form" id="acknowledgment-form" name="client-acknowledgment" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="client-acknowledgment">
+                        
+                        <div class="form-group">
+                            <label for="ack-clientName">Client Name *</label>
+                            <input type="text" id="ack-clientName" name="clientName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ack-email">Email Address *</label>
+                            <input type="email" id="ack-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ack-phone">Phone Number</label>
+                            <input type="tel" id="ack-phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group agreement-checkboxes">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="acknowledgeNPP" required>
+                                    I acknowledge that I have received or been offered a copy of the Notice of Privacy Practices.
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="understandRights" required>
+                                    I understand my rights regarding my personal and health-related information.
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ack-signature">Electronic Signature (Type Full Legal Name) *</label>
+                                <input type="text" id="ack-signature" name="signature" required placeholder="Type your full legal name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ack-date">Date *</label>
+                                <input type="date" id="ack-date" name="signatureDate" required>
+                            </div>
+                        </div>
+                        
+                        <p class="esign-disclaimer">
+                            By typing my name above, I understand that this constitutes a legal signature confirming that I
+                            acknowledge receipt of the Notice of Privacy Practices.
+                        </p>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Acknowledgment</button>
+                    </form>
+                </div>
+
+                <div class="print-actions no-print">
+                    <button onclick="window.print()" class="btn btn-secondary">Print This Page</button>
+                </div>
+
+                <h2>Contact</h2>
+                <div class="legal-contact">
+                    <p><strong>Email:</strong> <a href="mailto:welltrusthomecare@gmail.com">welltrusthomecare@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+12347046458">(234) 704-6458</a></p>
+                    <p><strong>Mailing Address:</strong><br>
+                    8210 Macedonia Commons Blvd, Suite 3B PMB 1080<br>
+                    Macedonia, OH 44056</p>
+                </div>
+
+                <div class="legal-nav">
+                    <h3>Related Documents</h3>
+                    <ul>
+                        <li><a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="hipaa-compliance.html">HIPAA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer no-print">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">♥</span>
+                        <span class="logo-text">Well Trust<span class="logo-accent">Home Care</span></span>
+                    </a>
+                    <p>Providing compassionate, professional home healthcare services to families in our community.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Personal Care</a></li>
+                        <li><a href="index.html#services">Household Support</a></li>
+                        <li><a href="index.html#services">Companion and Support Care</a></li>
+                        <li><a href="index.html#services">Memory Care</a></li>
+                        <li><a href="index.html#services">Meal Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p>📍 8210 Macedonia Commons Blvd<br>Suite 3B PMB 1080<br>Macedonia, OH 44056</p>
+                    <p>☎ (234) 704-6458</p>
+                    <p>✉️ welltrusthomecare@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WellTrust Home Care LLC. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="hipaa-compliance.html">HIPAA Compliance</a>
+                    <a href="notice-of-privacy-practices.html">Notice of Privacy Practices</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set default date to today
+        document.getElementById('ack-date').valueAsDate = new Date();
+        
+        // Handle form submission
+        document.getElementById('acknowledgment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your acknowledgment has been submitted successfully.');
+                    this.reset();
+                    document.getElementById('ack-date').valueAsDate = new Date();
+                } else {
+                    alert('There was an issue submitting your acknowledgment. Please try again or contact us directly.');
+                }
+            })
+            .catch(error => {
+                alert('There was an issue submitting your acknowledgment. Please try again or contact us directly.');
+            });
+        });
+    </script>
+</body>
+</html>
