@@ -175,10 +175,9 @@ function initContactForm() {
         
         // Submit to Netlify
         try {
-            const response = await fetch('/', {
+            const response = await fetch(form.action || '/', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                body: formData
             });
             
             if (response.ok) {
