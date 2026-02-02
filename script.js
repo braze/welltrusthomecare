@@ -140,7 +140,7 @@ function initScrollReveal() {
 }
 
 /**
- * Contact form handling
+ * Contact form handling - submits to Netlify
  */
 function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -173,13 +173,20 @@ function initContactForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         
-        // Simulate form submission (replace with actual API call)
+        // Submit to Netlify
         try {
-            await simulateFormSubmission(data);
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
             
-            // Success
-            showFormMessage(form, 'Thank you! We\'ll be in touch within 24 hours.', 'success');
-            form.reset();
+            if (response.ok) {
+                showFormMessage(form, 'Thank you! We\'ll be in touch within 24 hours.', 'success');
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
             
         } catch (error) {
             showFormMessage(form, 'Something went wrong. Please try again or call us directly.', 'error');
@@ -187,23 +194,6 @@ function initContactForm() {
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
         }
-    });
-}
-
-/**
- * Simulate form submission (replace with actual API endpoint)
- */
-function simulateFormSubmission(data) {
-    return new Promise((resolve, reject) => {
-        console.log('Form submitted:', data);
-        setTimeout(() => {
-            // Simulate success (90% of the time)
-            if (Math.random() > 0.1) {
-                resolve({ success: true });
-            } else {
-                reject(new Error('Simulated error'));
-            }
-        }, 1500);
     });
 }
 
