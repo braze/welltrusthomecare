@@ -250,8 +250,8 @@
             
             fetch('/', {
                 method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: formData
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
             })
             .then(response => {
                 if (response.ok) {

@@ -173,11 +173,12 @@ function initContactForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         
-        // Submit to Netlify
+        // Submit to Netlify (must be URL-encoded per Netlify docs — multipart breaks on some mobile browsers)
         try {
             const response = await fetch(form.action || '/', {
                 method: 'POST',
-                body: formData
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
             });
             
             if (response.ok) {
