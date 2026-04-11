@@ -1069,33 +1069,24 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     gap: 16px;
 }
 
-/* Grid: more reliable vertical alignment than flex for native controls + text (esp. mobile WebKit) */
-.radio-label {
-    display: grid;
-    grid-template-columns: 1.125rem minmax(0, 1fr);
-    column-gap: 8px;
-    align-items: start;
-    justify-items: start;
-    line-height: 1.25;
-    cursor: pointer;
-    font-size: 0.95rem;
-    color: var(--color-text);
-}
-
+/* Native control + label: center as one row (avoid start + margin-top — looks bottom-heavy on Android) */
+.radio-label,
 .checkbox-label {
-    display: grid;
-    grid-template-columns: 1.125rem minmax(0, 1fr);
-    column-gap: 8px;
-    align-items: start;
-    justify-items: start;
-    line-height: 1.4;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 100%;
     cursor: pointer;
     font-size: 0.95rem;
     color: var(--color-text);
+    line-height: 1.2;
+    vertical-align: top;
 }
 
 .radio-label input,
 .checkbox-label input {
+    flex: 0 0 auto;
     width: 1.125rem;
     height: 1.125rem;
     min-width: 1.125rem;
@@ -1105,13 +1096,15 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     cursor: pointer;
 }
 
-/* Optical vertical alignment with label text (native controls sit low in the line box otherwise) */
-.radio-label input {
-    margin-top: 0.08em;
+/* Multi-line labels: pin control to first line */
+.skills-grid .checkbox-label,
+.agreement-checkboxes .checkbox-label {
+    align-items: flex-start;
 }
 
-.checkbox-label input {
-    margin-top: 0.14em;
+.skills-grid .checkbox-label input,
+.agreement-checkboxes .checkbox-label input {
+    margin-top: 0.2rem;
 }
 
 /* Application form: keep native control box from shrinking on WebKit Android */
@@ -1129,10 +1122,6 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .agreement-checkboxes {
     flex-direction: column;
     gap: 16px;
-}
-
-.agreement-checkboxes .checkbox-label input {
-    margin-top: 0.2em;
 }
 
 /* File input styling */
