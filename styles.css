@@ -1069,7 +1069,10 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     gap: 16px;
 }
 
-/* Native control + label: center as one row (avoid start + margin-top — looks bottom-heavy on Android) */
+/*
+ * Label text must be wrapped in .choice-text so Chrome aligns flex items correctly.
+ * Raw text nodes next to inputs baseline-align to the control bottom; explicit spans center.
+ */
 .radio-label,
 .checkbox-label {
     display: inline-flex;
@@ -1080,8 +1083,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     cursor: pointer;
     font-size: 0.95rem;
     color: var(--color-text);
-    line-height: 1.2;
-    vertical-align: top;
+}
+
+.radio-label .choice-text,
+.checkbox-label .choice-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    line-height: 1.35;
 }
 
 .radio-label input,
@@ -1104,7 +1112,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .skills-grid .checkbox-label input,
 .agreement-checkboxes .checkbox-label input {
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
 }
 
 /* Application form: keep native control box from shrinking on WebKit Android */
