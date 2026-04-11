@@ -1081,10 +1081,21 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .radio-label input,
 .checkbox-label input {
+    flex-shrink: 0;
     width: 18px;
     height: 18px;
+    margin: 0;
     accent-color: var(--color-primary);
     cursor: pointer;
+}
+
+/* Careers / application form: reinforce control + label row on WebKit Android */
+.application-form .radio-label input[type="radio"],
+.application-form .checkbox-label input[type="checkbox"] {
+    min-width: 18px;
+    min-height: 18px;
+    flex: 0 0 18px;
+    align-self: center;
 }
 
 .skills-grid {
@@ -1120,12 +1131,12 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Form validation styles */
-.form-group input:invalid:not(:placeholder-shown),
-.form-group input:invalid:focus {
+.form-group input:not([type="radio"], [type="checkbox"]):invalid:not(:placeholder-shown),
+.form-group input:not([type="radio"], [type="checkbox"]):invalid:focus {
     border-color: #dc3545;
 }
 
-.form-group input:valid:not(:placeholder-shown) {
+.form-group input:not([type="radio"], [type="checkbox"]):valid:not(:placeholder-shown) {
     border-color: var(--color-primary);
 }
 
@@ -1294,7 +1305,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     margin-bottom: 8px;
 }
 
-.form-group input,
+.form-group input:not([type="radio"], [type="checkbox"]),
 .form-group select,
 .form-group textarea {
     width: 100%;
@@ -1308,7 +1319,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     transition: var(--transition);
 }
 
-.form-group input:focus,
+.form-group input:not([type="radio"], [type="checkbox"]):focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
