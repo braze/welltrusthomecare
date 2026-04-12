@@ -1065,13 +1065,16 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 .radio-group,
 .checkbox-group {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 16px;
 }
 
 /*
  * Two-column layout: control (left) | label text (right), always LTR.
- * Grid keeps columns from collapsing; align-items centers control vs text block vertically.
+ * Grid: column 1 = control, column 2 = label. align-items: center pairs them on one horizontal row.
  */
 .radio-label,
 .checkbox-label {
@@ -1079,7 +1082,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     grid-template-columns: auto minmax(0, 1fr);
     column-gap: 0.625rem;
     align-items: center;
-    justify-items: stretch;
+    justify-items: start;
     direction: ltr;
     box-sizing: border-box;
     width: auto;
@@ -1190,11 +1193,14 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    /* Keep options in horizontal rows (wrap); .agreement-checkboxes stays column via its own rule */
     .radio-group,
-    .checkbox-group {
-        flex-direction: column;
-        gap: 12px;
+    .checkbox-group:not(.agreement-checkboxes) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px 14px;
     }
 }
 
