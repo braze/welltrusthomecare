@@ -1136,21 +1136,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 
 .agreement-checkboxes .checkbox-label {
     width: 100%;
-    align-items: start;
-}
-
-.agreement-checkboxes .choice-control {
-    margin-top: 0.2em;
+    align-items: center; /* checkbox + text vertically centered on the row */
 }
 
 /* Long / wrapped copy */
 .skills-grid .checkbox-label .choice-text,
 .agreement-checkboxes .checkbox-label .choice-text {
     line-height: 1.45;
-}
-
-.agreement-checkboxes .checkbox-label .choice-text {
-    align-self: start;
 }
 
 .skills-grid {
