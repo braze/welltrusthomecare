@@ -732,7 +732,7 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     color: var(--color-text);
 }
 
-.value span {
+.value > div span {
     font-size: 0.85rem;
     color: var(--color-text-muted);
 }
