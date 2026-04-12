@@ -1130,15 +1130,27 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
 }
 
 /* Full-width rows (grid / stacked options): label spans the row; text stays in column 2 */
-.skills-grid .checkbox-label,
+.skills-grid .checkbox-label {
+    width: 100%;
+}
+
 .agreement-checkboxes .checkbox-label {
     width: 100%;
+    align-items: start;
+}
+
+.agreement-checkboxes .choice-control {
+    margin-top: 0.2em;
 }
 
 /* Long / wrapped copy */
 .skills-grid .checkbox-label .choice-text,
 .agreement-checkboxes .checkbox-label .choice-text {
     line-height: 1.45;
+}
+
+.agreement-checkboxes .checkbox-label .choice-text {
+    align-self: start;
 }
 
 .skills-grid {
@@ -1341,6 +1353,13 @@ h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
     font-weight: 600;
     color: var(--color-text);
     margin-bottom: 8px;
+}
+
+/* Beat .form-group label so grid layout keeps control + text on one row (choice-control is flex/block otherwise). */
+.form-group label.checkbox-label,
+.form-group label.radio-label {
+    display: grid;
+    margin-bottom: 0;
 }
 
 .form-group input:not([type="radio"], [type="checkbox"]),
