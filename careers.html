@@ -352,16 +352,16 @@
                     <h4>Reference #1</h4>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="app-ref1Name">Name *</label>
-                            <input type="text" id="app-ref1Name" name="ref1Name" required>
+                            <label for="app-ref1Name">Name</label>
+                            <input type="text" id="app-ref1Name" name="ref1Name">
                         </div>
                         <div class="form-group">
-                            <label for="app-ref1Phone">Phone *</label>
-                            <input type="tel" id="app-ref1Phone" name="ref1Phone" required pattern="[\d\s\-\(\)\+]{10,}" title="Please enter a valid phone number" placeholder="(234) 555-1234">
+                            <label for="app-ref1Phone">Phone</label>
+                            <input type="tel" id="app-ref1Phone" name="ref1Phone" pattern="[\d\s\-\(\)\+]{10,}" title="Please enter a valid phone number" placeholder="(234) 555-1234">
                         </div>
                         <div class="form-group">
-                            <label for="app-ref1Relationship">Relationship *</label>
-                            <input type="text" id="app-ref1Relationship" name="ref1Relationship" required>
+                            <label for="app-ref1Relationship">Relationship</label>
+                            <input type="text" id="app-ref1Relationship" name="ref1Relationship">
                         </div>
                     </div>
                     <h4>Reference #2</h4>
@@ -658,7 +658,9 @@
             
             // G) References
             addSection('G) References');
-            addField('Reference 1', getValue('app-ref1Name') + ' - ' + getValue('app-ref1Phone') + ' (' + getValue('app-ref1Relationship') + ')');
+            if (getValue('app-ref1Name') || getValue('app-ref1Phone') || getValue('app-ref1Relationship')) {
+                addField('Reference 1', getValue('app-ref1Name') + ' - ' + getValue('app-ref1Phone') + ' (' + getValue('app-ref1Relationship') + ')');
+            }
             if (getValue('app-ref2Name')) {
                 addField('Reference 2', getValue('app-ref2Name') + ' - ' + getValue('app-ref2Phone') + ' (' + getValue('app-ref2Relationship') + ')');
             }
