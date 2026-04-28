@@ -1050,9 +1050,7 @@
         if (!response.ok) {
           throw new Error("submit");
         }
-        window.alert(
-          "Thank you! Your competency test has been submitted to WellTrust Home Care."
-        );
+        window.location.replace("/");
       } catch (err3) {
         if (err3 && err3.message === "submit") {
           window.alert(
