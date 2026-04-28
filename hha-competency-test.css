@@ -1,0 +1,265 @@
+/* HHA Competency Test — standalone document style (unlinked page) */
+:root {
+  --hha-bg: #ffffff;
+  --hha-text: #111;
+  --hha-muted: #666;
+  --hha-border: #e0e0e0;
+  --hha-accent: #4a6741;
+  --hha-radius: 8px;
+  --hha-page-pad: clamp(16px, 4vw, 32px);
+  --hha-body: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.hha-test-page {
+  font-family: var(--hha-body);
+  color: var(--hha-text);
+  background: var(--hha-bg);
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hha-test-wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: var(--hha-page-pad) var(--hha-page-pad) 4rem;
+}
+
+.hha-test-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 1.5rem;
+}
+
+.hha-test-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.hha-pdf-capture {
+  background: #fff;
+}
+
+.hha-test-name-row input[type="text"] {
+  flex: 1 1 12rem;
+  min-width: 0;
+  border: none;
+  border-bottom: 1px solid var(--hha-text);
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  padding: 0.15rem 0.25rem;
+  color: var(--hha-text);
+}
+
+.hha-test-name-row .hha-test-date-locked {
+  flex: 1 1 12rem;
+  min-width: 0;
+  border: none;
+  border-bottom: 1px solid var(--hha-text);
+  border-radius: 0;
+  background: #f5f5f5;
+  font: inherit;
+  padding: 0.15rem 0.25rem;
+  color: var(--hha-text);
+  cursor: default;
+  user-select: all;
+  max-width: 20rem;
+}
+
+.hha-test-name-row input[name="employeeName"]:focus {
+  outline: 2px solid var(--hha-accent);
+  outline-offset: 2px;
+}
+
+.hha-test-instructions {
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.hha-test-instr-body {
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+}
+
+.hha-test-hr {
+  border: 0;
+  height: 1px;
+  background: var(--hha-border);
+  margin: 0 0 1.75rem;
+}
+
+.hha-test-section {
+  margin-bottom: 2.5rem;
+}
+
+.hha-test-section + .hha-test-section {
+  border-top: 1px solid var(--hha-border);
+  padding-top: 1.75rem;
+}
+
+.hha-test-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.25rem;
+  font-family: inherit;
+}
+
+.hha-test-question {
+  border: 0;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  min-width: 0;
+}
+
+.hha-test-question legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.hha-q-num {
+  font-weight: 500;
+}
+
+
+.hha-test-options {
+  margin: 0;
+  padding-left: 0.5rem;
+}
+
+.hha-test-option {
+  display: block;
+  margin: 0.4rem 0 0.4rem 0.35rem;
+  padding-left: 0.1rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.hha-test-option input {
+  margin: 0 0.4rem 0 0;
+  vertical-align: middle;
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
+  accent-color: var(--hha-accent);
+}
+
+.hha-test-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hha-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.hha-test-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.6rem 1.75rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--hha-accent);
+  border: none;
+  border-radius: var(--hha-radius);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.hha-test-submit:hover {
+  background: #3a5234;
+}
+
+.hha-test-submit:active {
+  transform: scale(0.99);
+}
+
+.hha-signature-block {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hha-border);
+}
+
+.hha-signature-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin: 0 0 0.25rem;
+}
+
+.hha-signature-hint {
+  font-size: 0.9rem;
+  color: var(--hha-muted);
+  margin: 0 0 0.6rem;
+}
+
+.hha-signature-canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 120px;
+  background: #fafafa;
+  border: 1px solid var(--hha-border);
+  border-radius: 6px;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.hha-test-controls {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.hha-sig-clear {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--hha-border);
+  background: #fff;
+  color: var(--hha-text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hha-sig-clear:hover {
+  background: #f5f5f5;
+}
+
+.hha-netlify-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hha-netlify-file-placeholder {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hha-test-submit {
+    transition: none;
+  }
+}

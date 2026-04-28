@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Health Aide Competency Test | Well Trust Home Care</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hha-competency-test.css">
+</head>
+<body class="hha-test-page">
+  <form
+    id="hha-test-form"
+    class="hha-test-wrap"
+    name="hha-competency"
+    method="POST"
+    action="/"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    enctype="multipart/form-data"
+    novalidate
+  >
+    <input type="hidden" name="form-name" value="hha-competency">
+    <p class="hha-netlify-honeypot" aria-hidden="true">
+      <label>Don’t fill this out if you’re human: <input type="text" name="bot-field" tabindex="-1" autocomplete="off" /></label>
+    </p>
+    <input type="hidden" name="scoreSummary" id="hha-score-summary" value="">
+    <!-- Declared for Netlify file handling (filled programmatically on submit) -->
+    <input type="file" name="hha-record" class="hha-netlify-file-placeholder" tabindex="-1" aria-hidden="true">
+    <input type="file" name="hha-score" class="hha-netlify-file-placeholder" tabindex="-1" aria-hidden="true">
+    <!-- First PDF: html2pdf captures this block (looks like the on-screen test + signature) -->
+    <div id="hha-pdf-capture" class="hha-pdf-capture" aria-label="Test document for PDF">
+      <h1 class="hha-test-title"><span aria-hidden="true">&#9989; </span>WellTrust Home Care LLC &ndash; Home Health Aide Competency Test</h1>
+
+      <div class="hha-test-name-row">
+        <label for="employee-name">Employee name:</label>
+        <input type="text" id="employee-name" name="employeeName" autocomplete="name" required>
+      </div>
+      <div class="hha-test-name-row hha-test-date-row">
+        <span id="hha-date-label">Date:</span>
+        <input type="text" id="test-date" name="testDate" class="hha-test-date-locked" readonly inputmode="none" aria-labelledby="hha-date-label" tabindex="-1" value="">
+      </div>
+
+      <p class="hha-test-instructions">Instructions:</p>
+      <p class="hha-test-instr-body">Choose ONE correct answer for each item.</p>
+
+      <hr class="hha-test-hr" aria-hidden="true">
+
+      <div id="test-sections" class="hha-test-sections"></div>
+
+      <div class="hha-signature-block">
+        <p class="hha-signature-title">Signature</p>
+        <p class="hha-signature-hint">Sign in the box below. This will appear on your test record.</p>
+        <canvas id="hha-signature" class="hha-signature-canvas" width="800" height="200" aria-label="Sign here"></canvas>
+      </div>
+    </div>
+
+    <div class="hha-test-controls hha-pdf-capture-skip">
+      <button type="button" class="hha-sig-clear" id="hha-sig-clear">Clear signature</button>
+    </div>
+
+    <div class="hha-test-footer hha-pdf-capture-skip">
+      <button type="submit" class="hha-test-submit" id="hha-submit">Submit</button>
+    </div>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="hha-competency-test.js" defer></script>
+</body>
+</html>
